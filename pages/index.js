@@ -10,7 +10,7 @@ export default function Home({ postsHome }) {
 				<ul>
 					{postsHome.capa.destaque_principal.map((post) => (
 						<li key={post.id}>
-							<Link href="/categoria/slug-do-post">
+							<Link href="/casa-decoracao/area-gourmet/">
 								<a>{post.titulo}</a>
 							</Link>
 						</li>

@@ -2,8 +2,16 @@ import { useRouter } from 'next/dist/client/router';
 import DefaultErrorPage from 'next/error';
 import Head from 'next/head';
 
-export const getStaticProps = async ({ params }) => {
-	const response = await fetch(process.env.POSTS_API_URL + params.postSlug);
+export const getStaticProps = async ({
+	params: { categorySlug, postSlug },
+}) => {
+	const response = await fetch(
+		'https://www.selecoes.com.br/wp-json/v2/last_posts/post/' +
+			categorySlug +
+			'/' +
+			postSlug
+	);
+
 	const data = await response.json();
 	return {
 		props: {
