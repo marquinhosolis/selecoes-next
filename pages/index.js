@@ -3,7 +3,12 @@ import Link from 'next/link';
 export default function Home({ postsHome }) {
 	return (
 		<main>
+			<script src="//m2d.m2.ai/pg.selecoes.com.br.js" async></script>
 			<h1>Revista Seleções</h1>
+			<div>
+				<span>Publicidade</span>
+			</div>
+			<div id="selecoes_mob_atf"></div>
 			<div className="capaHome">
 				<h2>Destaques</h2>
 				<h3>Destaque Princiapal</h3>
